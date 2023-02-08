@@ -265,21 +265,21 @@ function giveMeRandom (n) {
 
     for (let i = 0; i <= n; i++) {
 
-        randomArray += Math.round(Math.random() * n);
+      let  randomVal = Math.round(Math.random() * n);
 
-        if (randomArray.includes(randomArray[i]) === true) {
-            
+        if (randomArray.includes(randomVal)) {
+        
+            i = i -1;
             continue;
-            i = -1;
-
-            
         }
+
+    randomArray.push(randomVal);
 
     }
 
     return randomArray;
 }
 
-let randomN = giveMeRandom(5);
+let randomN = giveMeRandom(18);
 
 console.log(randomN);
