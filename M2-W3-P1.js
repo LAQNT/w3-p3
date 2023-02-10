@@ -209,7 +209,8 @@ console.log("----------------------- Esercizio 8 -----------------------");
 function upperFirst (strUpp) {
 
 
-    let arrString = strUpp.split(" ");
+    let arrString = strUpp.split(" "); 
+    //convert string to array, taking an existing element as referent to separate the words " "
 
     for (let i = 0; i < arrString.length; i++) {
 
@@ -233,23 +234,23 @@ console.log(uppStr);
 
 console.log("----------------------- Esercizio 9 -----------------------");
 
-// function cutString (strCut) {
 
-//     let cutStr = strCut.split(" ");
 
-//     // for (let i = 0; i < cutStr.length; i++) {
 
-//     //     cutStr[i] = cutStr; 
-//     }
 
-//     let cut = cutStr.join(" ");
 
-//     return cut;
+ function cutString (strCut) {
 
-// }
+     //let cutStrInit = strCut.slice(1);
+     //let cutStringFin = cutStrInit.slice(0, -1);
 
-// let cutStringA = cutString ("Epicode Laura");
-// // console.log(cutStringA);
+     let cutStringFin = strCut.substring(1, strCut.length -1);
+
+     return cutStringFin;
+ }
+
+ let cutStringA = cutString ("Laura");
+ console.log(cutStringA);
 
 
 
@@ -263,7 +264,7 @@ function giveMeRandom (n) {
 
     let randomArray = [];
 
-    for (let i = 0; i <= n; i++) {
+    for (let i = 0; i < n; i++) {
 
       let  randomVal = Math.round(Math.random() * n);
 
@@ -280,6 +281,6 @@ function giveMeRandom (n) {
     return randomArray;
 }
 
-let randomN = giveMeRandom(18);
+let randomN = giveMeRandom(20);
 
 console.log(randomN);
