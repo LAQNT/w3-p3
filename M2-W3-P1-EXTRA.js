@@ -196,12 +196,9 @@ function loopUntil(x) {
     while (cont !==3) {
 
         let random = Math.floor(Math.random()*(9-0));
-        console.log("primo log", random);
         
         if (random > x) {
             cont++    
-        console.log("secon log", cont);
-
         }
 
         else {
@@ -220,33 +217,105 @@ console.log(loopUntil(2));
 
 
 
-
-
 /* EXTRA 7
  Crea una funzione chiamata "average" che riceve un array come parametro e ritorna la media aritmetica dei numeri in esso contenuti.
  La funzione salta automaticamente qualsiasi valore non numerico all'interno dell'array.
 */
+console.log("----------------------- Esercizio Extra 7 -----------------------");
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+
+let arrayAv = [1, 2, 3, 4, 5];
+
+function average (numbers) {
+
+    let sumNumbers = 0
+    
+    for (let num of numbers ) {
+
+        sumNumbers += num;
+        // console.log(sumNumbers);
+    }
+    let avNumbers = sumNumbers/numbers.length;
+
+    return avNumbers
+}
+
+console.log(average(arrayAv));
+
+
 
 /* EXTRA 8
  Scrivi una funzione chiamata "longest" che ricerca la stringa più lunga all'interno del parametro ricevuto (un array di stringhe).
 */
+console.log("----------------------- Esercizio Extra 8 -----------------------");
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let arrayStr = ["Laura", "Paolo", "Francesco", "Viviana"];
+
+
+function longest (array) {
+
+let longestWord = 0; 
+
+
+    for (let i = 0; i < array.length; i++) {
+
+       if (array[i].length > longestWord) {
+        
+            longestWord = array[i].length; 
+            
+       }
+
+
+    }
+    return longestWord 
+}
+
+console.log(longest(arrayStr))
 
 /* EXTRA 9
  Scrivi una funzione per creare un filtro anti spam molto semplice per una casella email. La funzione riceve una stringa come parametro, "emailContent", e ritorna un boolean.
  La funzione deve tornare true se emailContent NON contiene le parole "SPAM" o "SCAM".
 */
+console.log("----------------------- Esercizio Extra 9 -----------------------");
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+
+let strEmail = "content SPAM"
+
+function filtro (emailContent) {
+
+    if (emailContent.includes("SPAM") || emailContent.includes("SCAM") ) {
+     return true;
+    }
+
+    else {
+        return "ok";
+    }
+
+}
+
+
+console.log(filtro(strEmail));
+
 
 /* EXTRA 10
  Scrivi una funzione che riceve come parametro una data e ritorna il numero di giorni passati ad oggi.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("----------------------- Esercizio Extra 10 -----------------------");
+
+let data = new Date("2023-02-01").getDate();
+
+function days (d) {
+
+    let oggi = new Date().getDate(); 
+
+    let giorni = oggi - d
+ 
+    return giorni
+}
+
+console.log(days(data));
+
 
 /* EXTRA 11
  Scrivi una funzione chiamata "matrixGenerator" che riceve come parametri due interi, "x" e "y".
@@ -255,5 +324,19 @@ console.log(loopUntil(2));
  ["00","01","02"
  "10","11","12"]
 */
+console.log("----------------------- Esercizio Extra 11 -----------------------");
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function matrixGenerator (x , y) {
+
+    let matrice = [];
+
+    for ( let i = 1; i <= (x*y); i++) {
+        i += 0;
+        matrice.push(i)
+    }
+
+    return matrice
+
+}
+
+console.log(matrixGenerator(3 , 2));
