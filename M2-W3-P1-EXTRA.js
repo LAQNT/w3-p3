@@ -330,13 +330,13 @@ function matrixGenerator (x , y) {
 
     let matrice = [];
 
-    for ( let i = 1; i <= (x*y); i++) {
-        i += 0;
-        matrice.push(i)
+    for ( let i = 1; i < y; i++) {
+
+        for ( let j = 0; j < x; j++ ) {
+            matrice.push (i.toString() + j.toString())
+        }        
     }
-
     return matrice
-
 }
 
 console.log(matrixGenerator(3 , 2));
