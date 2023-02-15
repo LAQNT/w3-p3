@@ -842,15 +842,15 @@ const jobs = [
 //let location = "US";
 //let title = "";
 
-function findJob (job, title, location) {
+function findJob (jobs, title, location) {
 
   let result = [];
   
   for (let job of jobs) {
 
-    if (job.location.toLowerCase().includes(location.toLowerCase()) && job.location.toLowerCase().includes(location.toLowerCase()))
+    if (job.title.toLowerCase().includes(title.toLowerCase()) && job.location.toLowerCase().includes(location.toLowerCase()))
       {
-        let eliminaCampi = ["description", "requirements", "benefits", "company_profile"]
+        let eliminaCampi = ["description", "requirements", "benefits", "company_profile", "department", "salary_range", "telecommuting", "has_company_logo", "has_questions", "employment_type", "required_experience", "required_education", "industry", "function","fraudulent", "job_id"]
         for (let campi of eliminaCampi) {
           delete job [campi]
         }
