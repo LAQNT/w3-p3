@@ -839,28 +839,20 @@ const jobs = [
 // to each object in results eliminate: description, requirements, benefits and company profile.
 // case insensitive
 
-let location = "US";
-let title = "";
+//let location = "US";
+//let title = "";
 
-function findJob (Jobs) {
+function findJob (job, title, location) {
 
   let result = [];
-  let count = 0
+  
+  for (let job of jobs) {
 
-  for (let job = 0; job < jobs.length; i++) {
-
-    if (job.location.toLowerCase().includes(location.toLowerCase()) &&
-        job.title.toLowerCase().includes(title.toLowerCase) ) 
+    if (job.location.toLowerCase().includes(location.toLowerCase()) && job.location.toLowerCase().includes(location.toLowerCase()))
       {
-        let toDelete = [
-           'description', 
-           'requirements', 
-           ' benefits', 
-           'company_profile'
-        ]
-
-        for (const field of toDelete) {
-          delete job[field]
+        let eliminaCampi = ["description", "requirements", "benefits", "company_profile"]
+        for (let campi of eliminaCampi) {
+          delete job [campi]
         }
 
         result.push(job);
@@ -870,4 +862,4 @@ function findJob (Jobs) {
   return {result, count : result.length}
 }
 
-console.log(findJob(jobs));
+console.log(findJob(jobs, "dev", "nj"));
