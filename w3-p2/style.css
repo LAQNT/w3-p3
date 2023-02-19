@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+/*---------------------- top menu-------------------- */
+
+.top-menu {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.top-menu h1 {
+    color: aliceblue;
+    font-size: 3.5rem ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 10px;
+}
+
+.top-menu i{
+    color: aliceblue;
+    opacity: 70%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.top-menu div {
+    display: flex;
+    gap: 50px;
+}
+
+
+
+
+
+/*---------------------- Vinyls-------------------- */
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    margin: 70px auto ; 
+    width: 500px;
+
+}
+
+.element-container {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    gap: 20px;
+}
+
+img {
+    width: 200px;
+    box-shadow: 3px 2px 5px rgba(180,180,180);
+    border-radius: 7px;
+
+}
+/*---------------------- JS-------------------- */
+.img-container {
+    width: 200px;
+    z-index: 2;
+    position: relative;
+    border-radius: 7px;
+    object-fit: cover;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.img-hover::before {
+    content: " ";
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(67, 57, 0);
+    opacity: 50%;
+    z-index: 0;
+    transition-duration: .001s;
+    transform: translateX(-100%);
+    cursor: pointer;
+}
+
+.img-hover:hover::before {
+    transform: translateX(0);
+    cursor: pointer;
+}
+
+/*------------------------------------------ */
+
+.album-info{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.album-info > span{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.album-info div {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap:7px;
+    justify-content: space-around;
+    height: 140px;
+}
+
+.album-info div span:first-of-type {
+    font-weight: 700;
+    color: rgb(81, 81, 81);
+}
+
+
+.album-info a {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+
+    border: solid 1px rgb(90, 90, 90);
+    width: 150px;
+    font-size: .7rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+}
+
+
+/*---------------------- input-------------------- */
+.requests {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.requests span {
+    font-weight: 600;
+    background-color: rgb(241, 238, 218);
+}
+
+input {
+    height: 100px;
+    width: 500px;
+    border: 1px solid rgb(189, 189, 189);
+}
+
+
+/*---------------------- footer-------------------- */
+
+footer {
+    background-color: black;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer span {
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+footer span:first-of-type{
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+footer span:last-of-type{
+    font-weight: 100;
+}
+
+
+/*---------------------- from JS -------------------- */
+
+
+.background-color-bg {
+    background-color:rgb(238, 215, 188) ;
+}
+
+.button-bg {
+    background-color: rgb(240, 255, 202);
+}
+
+.price-style {
+    font-weight: 600;
+    font-size: .8rem; 
+    color: rgb(255, 255, 255);
+    background-color: rgb(56, 56, 56);
+    width: 50px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+.price-style-selected {
+    font-weight: 600;
+    font-size: .8rem; 
+    color: rgb(50, 50, 50);
+    background-color: rgb(197, 226, 179);
+    width: 50px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
